@@ -46,42 +46,45 @@
 <body>
     <FORM name="live">
 
-        Please enter your age::<INPUT TYPE="text" NAME="age" VALUE="" SIZE=20> 
+        Please enter your age::<INPUT TYPE="text" NAME="age" VALUE="" SIZE=20>
         Example: (november 1,1966) <BR><BR><BR>
         <INPUT TYPE="button" NAME="start" VALUE="Start Timer" ONCLICK="lifetimer(this.form)">
-        
+
         <INPUT TYPE="reset" NAME="resetb" VALUE="Reset Age">
-        
+
         <BR><BR>
-        
+
         <TABLE border=0>
-        <TR><TD>You are days old:</TD>
-        
-        <TD>
-        
-        <INPUT TYPE="text" NAME="time1" VALUE="" size=8>
-        
-        </TD>
-        
-        </TR>
-        
-        <TR><TD>Plus hours old:</TD>
-        
-        <TD>
-        
-        <INPUT TYPE="text" NAME="time2" VALUE="" size=8>
-        
-        </TD>
-        
-        </TR>
-        
-        <TR><TD>Plus minutes old:</TD>
-        
-        <TD><INPUT TYPE="text" NAME="time3" VALUE="" size=8></TD>
-        
-        </TR>
+            <TR>
+                <TD>You are days old:</TD>
+
+                <TD>
+
+                    <INPUT TYPE="text" NAME="time1" VALUE="" size=8>
+
+                </TD>
+
+            </TR>
+
+            <TR>
+                <TD>Plus hours old:</TD>
+
+                <TD>
+
+                    <INPUT TYPE="text" NAME="time2" VALUE="" size=8>
+
+                </TD>
+
+            </TR>
+
+            <TR>
+                <TD>Plus minutes old:</TD>
+
+                <TD><INPUT TYPE="text" NAME="time3" VALUE="" size=8></TD>
+
+            </TR>
         </TABLE>
-        </FORM>
+    </FORM>
     <script language="JavaScript">
 
         var startTime = new Date();
@@ -175,4 +178,5 @@
         <input type="button" value="start" onClick="startit()">
         <input type="button" value="stop" onClick="stopTest()">
     </form>
+
 </body>

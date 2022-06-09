@@ -1,6 +1,13 @@
+
+
 function changeText() {
     document.getElementById("textChange").innerHTML = "Thanks for liking my Webpage";
 }
+
+function changeText() {
+    document.getElementById("textChange").innerHTML = "Hello :)";
+}
+
 
 var space = " ";
 var pos = 0;

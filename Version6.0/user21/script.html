@@ -77,18 +77,155 @@
     <div class="wideMargin" id="content">
         <h1 class="text-left my-3">My JavaScript Examples</h1><!-- Edit this line for the title of your page -->
         <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-4" style="background-color:yellow;">
-                    <center>
-                        <p id="textChange" class=".class"> My name is User 21</p>
-                    </center>
+
+                    <p id="textChange" class="class"> My name is User 21</p>
+
                 </div>
                 <div class="col-sm-4" style="background-color:orange;">
-                    <center><button type="button" onclick="changeText()">Click if you like</button></center>
+                    <button type="button" onclick="changeText()">Click if you like</button>
                 </div>
                 <div class="col-sm-4" style="background-color:yellow;">PUT YOUR CODE HERE</div>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p onMouseover="alert('Hello! :)');" value="Click Me!">Put your cursor over me!</p>
+        </div>
+        <div class="col">
+            <script>
+                function light(sw) {
+                    var pic;
+                    if (sw == 0) {
+                        pic = "bulboff.png"
+                    } else {
+                        pic = "bulbon.png"
+                    }
+                    document.getElementById('myImage').src = pic;
+                }
+            </script>
+
+            <img id="myImage" src="bulboff.png" width="150" height="180">
+
+            <p>
+                <button type="button" onclick="light(1)">Light On</button>
+                <button type="button" onclick="light(0)">Light Off</button>
+            </p>
+
+        </div>
+        <div class="col">
+            <p>Date and Time of Website Access</p>
+
+            <script>
+                document.write(Date());
+            </script>
+        </div>
+        <div class="col">
+            <img id="myImg" src="longcat.png" width="107" height="200">
+
+            <p>Click the button to display the height of the image.</p>
+
+            <button onclick="myFunction()">Try it</button>
+
+            <p id="demo"></p>
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myImg").height;
+                    document.getElementById("demo").innerHTML = x;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table id="myTable" style="padding:8px;border:1px solid black">
+                <tr>
+                    <td>Row</td>
+                    <td>One</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Row</td>
+                    <td>Two</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Row</td>
+                    <td>Three</td>
+                    <td>3</td>
+                </tr>
+            </table>
+
+            <p>
+                <input type="button" value="Delete one Row" onclick="document.getElementById('myTable').deleteRow(0)">
+            </p>
+        </div>
+        <div class="col">
+            <h2>Celcius to Fahrenheit</h2>
+
+            <p>Insert a number into one of the fields below:</p>
+
+            <p><input id="c" onkeyup="convert('C')"> Degrees Celsius</p>
+
+            <p><input id="f" onkeyup="convert('F')"> Degrees Fahrenheit</p>
+
+            <script>
+                function convert(degree) {
+                    var x;
+                    if (degree == "C") {
+                        x = document.getElementById("c").value * 9 / 5 + 32;
+                        document.getElementById("f").value = Math.round(x);
+                    } else {
+                        x = (document.getElementById("f").value - 32) * 5 / 9;
+                        document.getElementById("c").value = Math.round(x);
+                    }
+                }
+            </script>
+        </div>
+        <div class="col">
+            <h2>Alphabetically Organize</h2>
+
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+
+            <script>
+                const pets = [" Hershey", " Ryan", " Lego", " Mick"];
+                document.getElementById("demo1").innerHTML = pets;
+
+                pets.sort();
+                document.getElementById("demo2").innerHTML = pets;
+            </script>
+
+        </div>
+        <div class="col">
+            <script>
+                function disable() {
+                    document.getElementById("mySelect").disabled = true;
+                }
+                function enable() {
+                    document.getElementById("mySelect").disabled = false;
+                }
+            </script>
+            </head>
+
+            <body>
+                <h2>Class Selector</h2>
+                <form>
+                    <select id="mySelect">
+                        <option>Web Dev</option>
+                        <option>CHS</option>
+                        <option>English</option>
+                        <option>Psych</option>
+                    </select>
+                    <br><br>
+                    <input type="button" onclick="disable()" value="Disable list">
+                    <input type="button" onclick="enable()" value="Enable list">
+                </form>
         </div>
     </div>
     <!--↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑-->
